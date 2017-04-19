@@ -1,13 +1,8 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
-import App from './App'
-const store = require('./store/store')
-console.log(store);
+import App from './App.vue'
+import router from './router'
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  template: '<App/>',
-  store,
-  components: { App }
-})
+const app = new Vue({
+  ...App,
+  router
+}).$mount('#app')

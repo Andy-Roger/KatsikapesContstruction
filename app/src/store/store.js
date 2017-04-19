@@ -5,18 +5,16 @@ Vue.use(Vuex)
 
 const state = {
   userName: 'Yoyoyoyoyo',
-  pass: 'goatmilk',
-  boards: []
+
+  counter: 0
 }
 const mutations = {
   SET_USERNAME: function(state, newVal){
     state.userName = newVal;
   },
-  ADD_BOARD: function(state, board){
-    state.boards.push(board);
-  },
-  REMOVE_BOARD: function(state, board){
-    state.boards.splice(state.boards.indexOf(board),1)
+
+  INCREMENT: function(state, counter){
+    state.counter + 1
   }
 }
 
